@@ -1,0 +1,15 @@
+Bài 2 : Phân biệt mức quyền và quy tắc chia sẻ an toàn
+
+Phần 1 (Phân tích):
+
+Hành động của An vi phạm "Quy tắc Cờ Đỏ Bảo mật" vì: An đã kết hợp quyền cao nhất (Editor) với chế độ chia sẻ lỏng lẻo nhất (Anyone with the link) áp dụng lên một tài liệu chứa dữ liệu cực kỳ nhạy cảm (danh sách số điện thoại khách hàng).
+
+Hậu quả: Hành động này loại bỏ hoàn toàn lớp bảo vệ danh tính, biến tài liệu công ty thành một nơi công cộng. Bất kỳ ai vô tình hoặc cố ý có được đường link đều có thể truy cập ẩn danh, sao chép (Data Leak) và xóa sạch dữ liệu gốc mà không để lại dấu vết.
+
+Phần 2 (Sửa lỗi):
+
+(1) Mức quyền cho cộng tác viên: Nếu chỉ cần góp ý, hãy cấp quyền Commenter (Người nhận xét) để họ đề xuất nội dung mà không được sửa trực tiếp. Nếu công việc bắt buộc phải nhập liệu, có thể cấp quyền Editor nhưng tuyệt đối không dùng link công khai.
+
+(2) Chế độ chia sẻ an toàn 100%: Phải chuyển sang chế độ Restricted (Bị hạn chế). An chỉ được cấp quyền bằng cách nhập đích danh địa chỉ email của người cộng tác viên. Khi đó, người này bắt buộc phải đăng nhập đúng email mới mở được file.
+
+(3) Tính năng ngăn mời người lạ: Nhấn vào biểu tượng cài đặt (bánh răng cưa) ở góc trên bên phải của hộp thoại chia sẻ, sau đó tắt bỏ tùy chọn "Editors can change permissions and share" (Người chỉnh sửa có thể thay đổi quyền và chia sẻ). Việc này giúp khóa chặt quyền phân phối link, cộng tác viên sẽ không thể tự ý thêm người khác vào file.
